@@ -421,3 +421,6 @@ Do not submit until the public repository is accessible and the documented comma
 
 ## Git Workflow
 This project uses a feature branch workflow for development.
+
+## Project Status
+TaskFlow core application, algorithms engine, and AI quick-add are included.
