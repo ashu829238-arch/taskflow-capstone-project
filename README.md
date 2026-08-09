@@ -418,3 +418,6 @@ git log --graph --oneline --all
 ```
 
 Do not submit until the public repository is accessible and the documented commands work from a clean checkout.
+
+## Git Workflow
+This project uses a feature branch workflow for development.
