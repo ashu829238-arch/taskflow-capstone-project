@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>TaskFlow</h1>
+    <p>Dark-store engineering task dashboard</p>
+  </header>
+
+  <main class="page">
+    <section class="task-form-card">
+      <h2>Add Task</h2>
+      <form id="task-form">
+        <label>
+          Title
+          <input id="title" name="title" type="text" maxlength="200">
+          <span id="title-error" class="error" aria-live="polite"></span>
+        </label>
+
+        <label>
+          Priority
+          <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </label>
+
+        <label>
+          Due date
+          <input id="due-date" name="due_date" type="text" placeholder="e.g. next Friday">
+        </label>
+
+        <label>
+          Project ID
+          <input id="project-id" name="project_id" type="number" min="1" value="1">
+        </label>
+
+        <button type="submit">Add task</button>
+      </form>
+    </section>
+
+    <section class="quick-add-card">
+      <h2>AI Quick-Add</h2>
+      <form id="quick-add-form">
+        <label>
+          Describe the task
+          <input id="description" name="description" type="text" placeholder="Fix urgent scanner issue tomorrow">
+        </label>
+        <label>
+          Project ID
+          <input id="quick-project-id" type="number" min="1" value="1">
+        </label>
+        <button type="submit">Quick Add</button>
+      </form>
+      <span id="quick-add-message" aria-live="polite"></span>
+    </section>
+
+    <section id="task-list" class="task-list" aria-live="polite"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
