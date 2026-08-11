@@ -430,3 +430,7 @@ TaskFlow core application, algorithms engine, and AI quick-add are included.
 - Algorithm checks completed successfully with all required PASS cases.
 - Benchmark completed for task-shaped data at sizes 10, 500, and 3,000.
 - SQLite database file is excluded from Git tracking through .gitignore.
+
+## Submission Check
+
+The project is submitted as a single repository containing the FastAPI backend, frontend dashboard, algorithms engine, quick-add parser, benchmark, checks script, and README documentation.
