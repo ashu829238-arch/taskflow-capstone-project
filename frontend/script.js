@@ -158,12 +158,12 @@ async function editTask(task) {
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            title: newTitle.trim()
-        })
-    });
+body: JSON.stringify({
+    title: newTitle.trim()
+})
+});
 
-    if (response.ok) {
+if (response.ok) {
         await loadTasks();
     } else {
         const data = await response.json();
