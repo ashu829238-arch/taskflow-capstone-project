@@ -159,7 +159,6 @@ async function editTask(task) {
         body: JSON.stringify({
             title: newTitle.trim()
         })
-    });
 
     if (response.ok) {
         await loadTasks();
