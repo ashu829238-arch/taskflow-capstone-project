@@ -130,10 +130,12 @@ form.addEventListener("submit", async (event) => {
   });
 
   if (response.ok) {
-    titleInput.value = "";
-    dueDateInput.value = "";
-    await loadTasks();
-  } else {
+  titleInput.value = "";
+  dueDateInput.value = "";
+  titleError.textContent = "";
+  await loadTasks();
+}
+else {
     const data = await response.json();
     titleError.textContent = data.detail || "Could not create task.";
   }
@@ -159,6 +161,7 @@ async function editTask(task) {
         body: JSON.stringify({
             title: newTitle.trim()
         })
+    });
 
     if (response.ok) {
         await loadTasks();
@@ -166,8 +169,6 @@ async function editTask(task) {
         const data = await response.json();
         window.alert(data.detail || "Failed to update task.");
     }
-}
-
 }
 
 async function deleteTask(taskId) {
